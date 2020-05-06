@@ -1,1 +1,107 @@
-<p>Hello world</p>
+<!DOCTYPE html>
+<html>
+  <title>W3.CSS Template</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="css/w3.css" />
+  <link rel="stylesheet" href="/css/styles.css" />
+  <link rel="manifest" href="/manifest.json" />
+  <style>
+    body,
+    h1,
+    h5 {
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    }
+    body,
+    html {
+      height: 100%;
+    }
+    .bgimg {
+      background-image: url("/img/retro2.jpg");
+      min-height: 100%;
+      background-position: center;
+      background-size: cover;
+    }
+  </style>
+  <body>
+    <div class="bgimg w3-display-container w3-text-white">
+      <div class="w3-display-middle">
+        <h2 class="w3-black">Caffe Retro</h2>
+      </div>
+      <div class="w3-display-topleft w3-container w3-xlarge">
+        <p>
+          <button
+            onclick="document.getElementById('menu').style.display='block'"
+            class="w3-button w3-black"
+          >
+            meni
+          </button>
+        </p>
+        <p>
+          <a class="w3-black w3-button" href="/pages/restoran.html">restoran</a>
+        </p>
+      </div>
+      <div class="w3-display-bottomleft w3-container">
+        <p class="w3-xlarge w3-black">
+          ponedeljak - petak 08-00 | subota - nedelja 08-02
+        </p>
+        <p class="w3-large w3-black">Ćirila i Metodija 9, Stara Pazova</p>
+        <p>
+          powered by
+          <a href="https://www.w3schools.com/w3css/default.asp" target="_blank"
+            >w3.css</a
+          >
+        </p>
+      </div>
+    </div>
+
+    <!-- Menu Modal -->
+    <div id="menu" class="w3-modal">
+      <div class="w3-modal-content w3-animate-zoom">
+        <div class="w3-container w3-black w3-display-container">
+          <span
+            onclick="document.getElementById('menu').style.display='none'"
+            class="w3-button w3-display-topright w3-large"
+            >x</span
+          >
+          <h1>Kafe</h1>
+        </div>
+        <div class="w3-container">
+          <h5>Espreso <b>150</b></h5>
+          <h5>Dupli espreso <b>180</b></h5>
+          <h5>Produženi espreso <b>200</b></h5>
+          <h5>Kapućino <b>150</b></h5>
+          <h5>Kafe late <b>200</b></h5>
+          <h5>Moka <b>200</b></h5>
+        </div>
+        <div class="w3-container w3-black">
+          <h1>Piva</h1>
+        </div>
+        <div class="w3-container">
+          <h5>Jelen 0.33 <b>150</b></h5>
+          <h5>Jelen 0.5 <b>200</b></h5>
+          <h5>Zaječarsko 0.33 <b>150</b></h5>
+          <h5>Zaječarsko 0.5 <b>180</b></h5>
+          <h5>Paulaner 0.5 <b>250</b></h5>
+          <h5>Heineken 0.5 <b>250</b></h5>
+        </div>
+        <div class="w3-container w3-black">
+          <h1>Sokovi</h1>
+        </div>
+        <div class="w3-container">
+          <h5>Coca Cola <b>150</b></h5>
+          <h5>Sprite <b>150</b></h5>
+          <h5>Fanta <b>150</b></h5>
+          <h5>Cockta <b>150</b></h5>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/app.js"></script>
+    <script>
+      if (navigator.onLine == false) {
+        alert("Nemate pristup internetu. Prikazani su podaci iz kes memorije.");
+      }
+    </script>
+  </body>
+</html>
